@@ -105,7 +105,7 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
         }
       >
         {/* Main Asymmetric Editorial Grid */}
-        <div className="mx-auto my-auto w-full max-w-[1400px] px-5 sm:px-8 lg:px-12">
+        <div className="mx-auto my-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-14">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center lg:gap-8">
             {/* Far-Left Section Identifier & Keywords Column */}
             <div className="lg:col-span-2 flex lg:flex-col justify-between lg:justify-start items-start gap-6 lg:self-start lg:pt-3">
@@ -139,8 +139,8 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
             </div>
 
             {/* Center-Left Editorial Headline & Studio Statement */}
-            <div className="lg:col-span-5 xl:col-span-6">
-              <h1 className="text-[2.65rem] leading-[0.98] sm:text-6xl lg:text-[4.15rem] xl:text-[4.85rem] font-bold tracking-[-0.035em] uppercase">
+            <div className="lg:col-span-6">
+              <h1 className="text-[2.75rem] leading-[0.98] sm:text-6xl lg:text-[4.25rem] xl:text-[5rem] font-bold tracking-[-0.035em] uppercase">
                 {STUDIO_CONFIG.heroHeadline.map((line, index) => {
                   const isLast = index === STUDIO_CONFIG.heroHeadline.length - 1;
                   return (
@@ -154,15 +154,15 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
                 })}
               </h1>
 
-              <div className="mt-6 sm:mt-8 max-w-[540px] space-y-2.5">
+              <div className="mt-7 sm:mt-8 max-w-[560px] space-y-3">
                 <p
-                  className="text-sm sm:text-base font-medium leading-[1.6]"
+                  className="text-base sm:text-lg font-medium leading-[1.6]"
                   style={{ color: primaryTextColor }}
                 >
                   {STUDIO_CONFIG.heroLead}
                 </p>
                 <p
-                  className="font-mono-tech text-xs sm:text-[13.5px] leading-[1.75]"
+                  className="font-mono-tech text-sm leading-[1.75]"
                   style={{ color: secondaryTextColor }}
                 >
                   {STUDIO_CONFIG.heroDescription}
@@ -172,7 +172,7 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
               <div className="mt-8 sm:mt-10">
                 <Link
                   href="#projects"
-                  className="inline-flex items-center gap-4 border px-6 py-3.5 font-mono-tech text-xs tracking-[0.18em] uppercase transition-colors duration-150 hover:bg-[var(--hero-fg)] hover:text-[var(--hero-bg)]"
+                  className="inline-flex items-center gap-4 border px-7 py-4 font-mono-tech text-xs tracking-[0.18em] uppercase transition-colors duration-150 hover:bg-[var(--hero-fg)] hover:text-[var(--hero-bg)]"
                   style={{
                     borderColor: primaryTextColor,
                   }}
@@ -183,7 +183,7 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
             </div>
 
             {/* Right Column — Signature Binary Door */}
-            <div className="lg:col-span-5 xl:col-span-4">
+            <div className="lg:col-span-4">
               <DoorAnimation
                 closeProgress={doorCloseProgress}
                 binaryColor={binaryColor}

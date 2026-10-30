@@ -78,16 +78,16 @@ html[data-theme="dark"] {
     font-size: 16px;
   }
 
-  /* Desktop scaling: calibrates the default view to match the 110% zoom sweet spot */
+  /* Calibrated proportional desktop boost */
   @media (min-width: 1024px) {
     html {
-      font-size: 17.6px; /* 16px * 1.10 = 17.6px */
+      font-size: 19px;
     }
   }
 
-  @media (min-width: 1600px) {
+  @media (min-width: 1536px) {
     html {
-      font-size: 18.4px;
+      font-size: 20.5px;
     }
   }
 
