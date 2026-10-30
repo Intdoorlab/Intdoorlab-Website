@@ -4,36 +4,38 @@ export interface NoteEntry {
   category:
     | 'DEVELOPMENT LOG'
     | 'TECHNICAL EXPERIMENT'
-    | 'PRODUCT DESIGN'
-    | 'AI & AUTOMATION'
-    | 'ENGINEERING NOTE'
-    | 'STUDIO UPDATE';
+    | 'RESEARCH & DISCOVERIES'
+    | 'PRODUCT & INTERFACE DESIGN'
+    | 'AI & EMERGING TECHNOLOGIES'
+    | 'ENGINEERING NOTES'
+    | 'STUDIO UPDATES';
   title: string;
   summary: string;
   href?: string;
 }
 
 export const NOTES_SECTION_COPY = {
-  lead: 'Thoughts, experiments, and things discovered along the way.',
+  sectionLabel: '04 — NOTES',
+  title: 'THOUGHTS IN PROGRESS.',
+  lead: 'Not everything needs to begin as a finished idea.',
+  subLead: 'A record of things discovered along the way.',
   paragraphs: [
-    'Not everything starts as a finished product. Some of the most interesting parts happen during the process.',
-    "A space for documenting what we're learning, testing, designing, and building.",
+    'Development experiments, technical observations, design decisions, unexpected discoveries, and ideas that emerge during the process of building.',
+    'Some notes become projects. Some remain questions. Others simply document something worth remembering.',
+    'This is where the process lives.',
   ],
 };
 
 export const NOTES_TOPICS: string[] = [
   'Development Logs',
   'Technical Experiments',
-  'Product Design',
-  'AI & Automation',
+  'Research & Discoveries',
+  'Product & Interface Design',
+  'AI & Emerging Technologies',
   'Engineering Notes',
   'Studio Updates',
 ];
 
-/**
- * Studio Notes / Dispatches.
- * Intentionally empty until official notes are ready to publish — do not add placeholder articles.
- */
 export const NOTES_ENTRIES: NoteEntry[] = [];
 
 export const SHOW_EMPTY_NOTES_INDEX = true;

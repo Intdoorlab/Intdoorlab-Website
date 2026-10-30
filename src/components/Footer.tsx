@@ -13,7 +13,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 py-20 sm:py-28">
         {/* Section Identifier */}
         <div className="font-mono-tech text-xs tracking-[0.2em] text-[var(--muted)]">
-          / 05
+          / {STUDIO_CONFIG.contactSectionLabel}
         </div>
 
         {/* Main Split Contact Block */}
@@ -77,9 +77,10 @@ export function Footer() {
             <div>
               <a
                 href={`mailto:${STUDIO_CONFIG.email}`}
-                className="inline-flex items-center border border-[var(--fg)] px-6 py-3.5 font-mono-tech text-xs tracking-[0.18em] text-[var(--fg)] uppercase transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
+                className="inline-flex items-center gap-2 border border-[var(--fg)] px-6 py-3.5 font-mono-tech text-xs tracking-[0.18em] text-[var(--fg)] uppercase transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
               >
-                [ {STUDIO_CONFIG.contactCtaLabel} ]
+                <span>[{STUDIO_CONFIG.contactCtaLabel}</span>
+                <span aria-hidden="true">&rarr;]</span>
               </a>
             </div>
           </div>
@@ -92,6 +93,7 @@ export function Footer() {
               {STUDIO_CONFIG.footerLines[0]}
             </div>
             <div className="text-[var(--muted)]">{STUDIO_CONFIG.footerLines[1]}</div>
+            <div className="text-[var(--muted)]">{STUDIO_CONFIG.footerKeywords}</div>
             <div className="text-[var(--muted)]">{STUDIO_CONFIG.footerLines[2]}</div>
           </div>
 

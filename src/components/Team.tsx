@@ -25,24 +25,17 @@ export function Team() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end border-b border-[var(--line)] pb-10">
           <div className="lg:col-span-5">
             <div className="font-mono-tech text-xs tracking-[0.18em] text-[var(--muted)] uppercase">
-              // STUDIO COLLECTIVE
+              {TEAM_SECTION_COPY.sectionLabel}
             </div>
             <h2
               id="team-heading"
               className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-bold leading-[1.06] tracking-[-0.03em] text-[var(--fg)] uppercase"
             >
-              {TEAM_SECTION_COPY.heading.map((line) => (
-                <span key={line} className="block">
-                  {line}
-                </span>
-              ))}
+              {TEAM_SECTION_COPY.statement}
             </h2>
           </div>
 
           <div className="lg:col-span-7 lg:pl-8 space-y-2.5">
-            <p className="text-base sm:text-lg font-medium leading-snug text-[var(--fg)]">
-              {TEAM_SECTION_COPY.statement}
-            </p>
             {TEAM_SECTION_COPY.paragraphs.map((line, i) => (
               <p key={i} className="text-sm leading-relaxed text-[var(--muted)]">
                 {line}
@@ -84,7 +77,7 @@ export function Team() {
                   <div className="flex aspect-[4/4] max-w-[200px] flex-col justify-between border border-[var(--fg)] bg-[var(--bg)] p-5 font-mono-tech">
                     <div className="flex items-center justify-between text-[11px] tracking-[0.18em] text-[var(--muted)]">
                       <span>0{index + 1}</span>
-                      <span>// MEMBER</span>
+                      <span>// FOUNDER</span>
                     </div>
                     <div className="text-3xl font-bold tracking-[0.12em] text-[var(--fg)]">
                       {getInitials(member.name)}

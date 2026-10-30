@@ -114,17 +114,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {/* Status & Details Link */}
-      <div className="mt-6 flex items-center justify-between border-t border-[var(--line)] pt-4">
+      <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--line)] pt-4">
         <span className="font-mono-tech text-[11px] tracking-[0.16em] text-[var(--muted)] uppercase">
-          [ {project.status} ]
+          [{project.status}]
         </span>
 
         <Link
           href={`/projects/${project.slug}`}
-          className="inline-flex items-center gap-2 font-mono-tech text-[11px] tracking-[0.15em] text-[var(--fg)] uppercase transition-transform duration-150 group-hover:translate-x-0.5"
+          className="inline-flex items-center gap-1.5 font-mono-tech text-[11px] tracking-[0.15em] text-[var(--fg)] uppercase transition-transform duration-150 group-hover:translate-x-0.5"
         >
-          <span>{project.exploreLabel}</span>
-          <span aria-hidden="true">&rarr;</span>
+          <span>[{project.exploreLabel}]</span>
         </Link>
       </div>
     </article>

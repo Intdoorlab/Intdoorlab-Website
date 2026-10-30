@@ -11,28 +11,38 @@ export interface StudioConfig {
   email: string;
   location: string;
   tagline: string;
+  navLabel: string;
+  heroSectionLabel: string;
+  heroKeywords: string[];
   heroHeadline: string[];
   heroLead: string;
   heroDescription: string;
+  heroCta: string;
   doorCaption: string[];
-  currentlyBuildingSubtitle: string;
+  scrollLabel: string;
+  projectsSectionLabel: string;
+  projectsHeading: string[];
+  projectsSubtitle: string;
+  aboutSectionLabel: string;
   aboutHeading: string[];
   aboutLead: string;
   aboutParagraphs: string[];
   aboutClosingIdea: string;
-  nameSectionLabel: string;
-  nameBreakdown: NameElement[];
+  areasHeading: string;
   focusAreas: string[];
+  technologiesHeading: string;
   technologies: string[];
+  nameSectionLabel: string;
+  nameSectionTitle: string;
+  nameBreakdown: NameElement[];
+  contactSectionLabel: string;
   contactHeadline: string[];
   contactHeadingLabel: string;
   contactLines: string[];
   contactCtaLabel: string;
+  footerTagline: string;
+  footerKeywords: string;
   footerLines: string[];
-  /**
-   * Fill in your verified external profile URLs here when ready.
-   * Leave as empty string ("") to display non-clickable placeholders without broken links.
-   */
   links: {
     github: string;
     linkedin: string;
@@ -45,75 +55,93 @@ export const STUDIO_CONFIG: StudioConfig = {
   domain: 'intdoorlab.com',
   email: 'triston@intdoorlab.com',
   location: 'Ireland',
-  tagline: 'Independent Software Studio',
-  heroHeadline: ['BUILDING', 'SOFTWARE', 'BEYOND', 'THE OBVIOUS.'],
-  heroLead: 'A door to ideas, experiments, and things yet to be built.',
+  tagline: 'INDEPENDENT TECHNOLOGY & EXPERIMENTATION LAB',
+  navLabel: 'NAVIGATION',
+  heroSectionLabel: '01 — INTRODUCTION',
+  heroKeywords: ['IDEAS', 'EXPERIMENTS', 'TECHNOLOGY'],
+  heroHeadline: ['BEYOND', 'WHAT', 'ALREADY', 'EXISTS.'],
+  heroLead: 'An open door to ideas, possibilities, and things worth exploring.',
   heroDescription:
-    'IntDoorLab is an independent software studio where technology meets curiosity, and ideas become something real.',
+    'IntDoorLab is an independent lab exploring the intersection of technology, creativity, and engineering. A place where curiosity becomes experimentation, ideas take shape, and possibilities are built into something real.',
+  heroCta: 'EXPLORE PROJECTS',
   doorCaption: ['A', 'DOOR', 'TO', 'IDEAS', 'AND', 'BEYOND.'],
-  currentlyBuildingSubtitle:
-    "Things we're working on, exploring, and bringing to life.",
-  aboutHeading: ['ABOUT', 'THE STUDIO'],
-  aboutLead: 'We like building things.',
+  scrollLabel: '[SCROLL TO EXPLORE]',
+  projectsSectionLabel: '02 — PROJECTS',
+  projectsHeading: ['CURRENT', 'EXPLORATIONS'],
+  projectsSubtitle:
+    "Ideas in progress, experiments taking shape, and projects we're bringing into the world.",
+  aboutSectionLabel: '03 — ABOUT',
+  aboutHeading: ['A PLACE TO EXPLORE', "WHAT'S POSSIBLE."],
+  aboutLead: 'Curiosity is where things begin. Building is how we find out.',
   aboutParagraphs: [
-    'From desktop applications to intelligent systems, our work moves between software engineering, experimentation, and interface design.',
-    "Some ideas start with a problem. Others start with curiosity. Either way, we enjoy exploring what's possible and figuring out how to make it work.",
-    'Founded by Teng Rui Tan, IntDoorLab is an independent software studio built around a simple idea:',
+    "IntDoorLab was founded around a simple idea: technology is not just something to use. It's something to question, explore, experiment with, and create.",
+    'Our interests move across software, artificial intelligence, cybersecurity, systems engineering, and digital experiences.',
+    'Some projects begin with a problem. Others begin with a question, an unfamiliar concept, or simply the desire to see whether something can be done.',
+    'We don\'t limit ourselves to a particular category or outcome. The process of exploring an idea is just as important as what eventually comes out of it.',
+    'Founded by Teng Rui Tan, IntDoorLab is an independent space for turning curiosity into experimentation and experimentation into something tangible.',
   ],
-  aboutClosingIdea: "There's always something beyond what's already been done.",
-  nameSectionLabel: '// INT / DOOR / LAB',
+  aboutClosingIdea: 'There is always more beyond what we already know.',
+  areasHeading: '// AREAS OF EXPLORATION',
+  focusAreas: [
+    'Software & Systems Engineering',
+    'Artificial Intelligence',
+    'Human-Computer Interaction',
+    'Desktop Applications',
+    'Cybersecurity',
+    'Automation & Intelligent Systems',
+    'Interface & Experience Design',
+    'Emerging Technologies',
+  ],
+  technologiesHeading: '// TECHNOLOGIES',
+  technologies: [
+    'C++',
+    'Python',
+    'JavaScript',
+    'HTML & CSS',
+    'PHP',
+    'SQL',
+    'Linux',
+  ],
+  nameSectionLabel: '// THE NAME',
+  nameSectionTitle: 'INT / DOOR / LAB',
   nameBreakdown: [
     {
       segment: 'INT',
       meaning: 'INTELLIGENCE / TECHNOLOGY',
       description:
-        'The systems, logic, and technologies behind what we build.',
+        'The ideas, logic, and systems that shape the way we understand and interact with technology.',
     },
     {
       segment: 'DOOR',
       meaning: 'POSSIBILITIES / EXPLORATION',
       description:
-        'An opening to new perspectives, unfamiliar ideas, and what lies beyond.',
+        'An opening to unfamiliar perspectives, new directions, and possibilities beyond the obvious.',
     },
     {
       segment: 'LAB',
-      meaning: 'EXPERIMENTATION / DEVELOPMENT',
+      meaning: 'EXPERIMENTATION / CREATION',
       description:
-        'A place to explore, test, create, and turn ideas into something tangible.',
+        'A space to question, test, develop, and turn ideas into something tangible.',
     },
   ],
-  focusAreas: [
-    'Software Engineering',
-    'Artificial Intelligence',
-    'Desktop Applications',
-    'Automation',
-    'Cybersecurity',
-    'Interface Design',
-  ],
-  technologies: [
-    'C++',
-    'Python',
-    'JavaScript',
-    'HTML / CSS',
-    'PHP',
-    'SQL',
-    'Linux',
-  ],
-  contactHeadline: ['A DOOR', "TO WHAT'S", 'NEXT.'],
-  contactHeadingLabel: 'HAVE SOMETHING IN MIND?',
+  contactSectionLabel: "05 — WHAT'S NEXT",
+  contactHeadline: ["THERE'S ALWAYS", 'ANOTHER DOOR.'],
+  contactHeadingLabel: 'HAVE AN IDEA WORTH EXPLORING?',
   contactLines: [
-    'An idea, a project, a question, or simply something worth discussing.',
-    'Get in touch.',
+    'A possibility, an interesting problem, a project, or simply something you\'ve been thinking about.',
+    "We're always open to interesting conversations, new perspectives, and opportunities to build something together.",
+    "Let's see where it leads.",
   ],
   contactCtaLabel: 'GET IN TOUCH',
+  footerTagline: 'INDEPENDENT TECHNOLOGY & EXPERIMENTATION LAB',
+  footerKeywords: 'IDEAS / EXPERIMENTS / TECHNOLOGY',
   footerLines: [
     'INTDOORLAB',
-    'INDEPENDENT SOFTWARE STUDIO',
+    'INDEPENDENT TECHNOLOGY & EXPERIMENTATION LAB',
     'BUILT IN IRELAND',
   ],
   links: {
-    // Add your official studio or profile URLs below (e.g. "https://github.com/...")
-    github: 'https://github.com/Intdoorlab',
-    linkedin: '',
+    github: 'https://github.com/Afugegege',
+    linkedin: 'https://www.linkedin.com/in/triston-tan-teng-rui/',
   },
 };

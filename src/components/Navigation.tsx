@@ -83,13 +83,18 @@ export function Navigation({ invertedOverHero = false }: NavigationProps) {
       }
     >
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 sm:px-8 lg:px-12">
-        {/* Brand Wordmark */}
-        <Link
-          href="/"
-          className="text-sm sm:text-[15px] font-semibold tracking-[0.22em] uppercase transition-opacity hover:opacity-70"
-        >
-          {STUDIO_CONFIG.uppercaseName}
-        </Link>
+        {/* Brand Wordmark & Tagline */}
+        <div className="flex flex-col">
+          <Link
+            href="/"
+            className="text-sm sm:text-[15px] font-semibold tracking-[0.22em] uppercase transition-opacity hover:opacity-70"
+          >
+            {STUDIO_CONFIG.uppercaseName}
+          </Link>
+          <span className="hidden lg:block font-mono-tech text-[9px] tracking-[0.14em] text-[var(--muted)] uppercase -mt-0.5">
+            {STUDIO_CONFIG.tagline}
+          </span>
+        </div>
 
         {/* Desktop Navigation */}
         <nav
@@ -157,7 +162,7 @@ export function Navigation({ invertedOverHero = false }: NavigationProps) {
                 <div className="space-y-1.5">
                   <div className="flex justify-between">
                     <span className={mutedClass}>IDENTITY</span>
-                    <span>INDEPENDENT STUDIO</span>
+                    <span>{STUDIO_CONFIG.tagline}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className={mutedClass}>ACTIVE BUILDS</span>

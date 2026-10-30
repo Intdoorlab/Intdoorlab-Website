@@ -1,8 +1,7 @@
 export type ProjectFilterCategory =
   | 'ALL'
-  | 'APPS'
-  | 'AI'
-  | 'TOOLS'
+  | 'APPLICATIONS'
+  | 'AI & SYSTEMS'
   | 'EXPERIMENTS';
 
 export interface ProjectScreenshot {
@@ -58,9 +57,8 @@ export interface Project {
 
 export const PROJECT_FILTERS: ProjectFilterCategory[] = [
   'ALL',
-  'APPS',
-  'AI',
-  'TOOLS',
+  'APPLICATIONS',
+  'AI & SYSTEMS',
   'EXPERIMENTS',
 ];
 
@@ -70,16 +68,16 @@ export const PROJECTS: Project[] = [
     slug: 'overly',
     name: 'OverLy',
     category: 'DESKTOP APPLICATION / MUSIC',
-    filterCategories: ['APPS', 'TOOLS'],
+    filterCategories: ['APPLICATIONS'],
     status: 'IN DEVELOPMENT',
-    leadHook: 'Music, without the boundaries of a player window.',
-    tagline: 'MUSIC, WITHOUT THE BOUNDARIES OF A PLAYER WINDOW.',
+    leadHook: 'A different way to experience music.',
+    tagline: 'A DIFFERENT WAY TO EXPERIENCE MUSIC.',
     shortDescription:
-      'A floating lyrics experience designed to make music feel more connected to your desktop.',
+      "Music shouldn't be confined to a player window. OverLy explores a more connected listening experience through floating lyrics, desktop integration, and thoughtful interface design.",
     exploreLabel: 'EXPLORE OVERLY',
     overview: [
-      'OverLy is a desktop application being developed under IntDoorLab to bring real-time synchronised lyrics into an unobtrusive, customisable floating interface.',
-      'Designed around active desktop workflows, OverLy explores ways to keep music present without interrupting focus — combining responsive lyric timing, adaptable overlay modes, and artwork-driven visual treatments that retain OverLy’s own product identity.',
+      'OverLy is a desktop application exploring a more connected listening experience through floating lyrics, desktop integration, and thoughtful interface design.',
+      'Designed around active workflows, OverLy keeps music visually present without interrupting focus — combining responsive lyric timing, dynamic theming, and an interface that respects the desktop environment.',
     ],
     featuresHeading: 'CONCEPTS & CAPABILITIES IN DEVELOPMENT',
     features: [
@@ -125,12 +123,12 @@ export const PROJECTS: Project[] = [
       'Tidal',
       'Browser-Based Music Players',
     ],
-    techStack: ['Electron', 'JavaScript', 'HTML / CSS', 'Windows Media Session'],
+    techStack: ['Electron', 'JavaScript', 'HTML & CSS', 'Windows Media Session'],
     platforms: ['Windows (In Development)', 'macOS (Planned)'],
     tags: ['WINDOWS', 'LYRICS', 'DESKTOP', 'MUSIC'],
     textSpecimens: [
       {
-        windowLabel: 'OVERLY SPECIMEN',
+        windowLabel: 'OVERLY / PROJECT SPECIMEN',
         modeLabel: 'VIEW 01 — SYNCHRONISED LYRICS SURFACE',
         primaryLines: [
           '01:42.18 — The night is quiet',
@@ -184,17 +182,17 @@ export const PROJECTS: Project[] = [
     number: '02',
     slug: 'friday',
     name: 'Friday',
-    category: 'AI ASSISTANT / AUTOMATION',
-    filterCategories: ['AI', 'APPS', 'TOOLS', 'EXPERIMENTS'],
+    category: 'ARTIFICIAL INTELLIGENCE / AUTOMATION',
+    filterCategories: ['AI & SYSTEMS', 'APPLICATIONS', 'EXPERIMENTS'],
     status: 'EXPERIMENTAL',
-    leadHook: 'More than a conversation.',
-    tagline: 'MORE THAN A CONVERSATION.',
+    leadHook: 'An assistant that goes beyond answering.',
+    tagline: 'AN ASSISTANT THAT GOES BEYOND ANSWERING.',
     shortDescription:
-      'An ongoing exploration of AI, voice interaction, and an assistant that can understand, interact, and get things done.',
+      'Exploring what happens when AI moves beyond conversation and becomes part of the environment around us. Voice interaction, contextual awareness, desktop control, and intelligent automation.',
     exploreLabel: 'EXPLORE FRIDAY',
     overview: [
-      'Friday is an ongoing experimental AI assistant project developed inside IntDoorLab to study how conversational reasoning, voice interfaces, and direct system actions can operate together on the desktop.',
-      'Rather than a commercial off-the-shelf product, Friday serves as an active research and engineering environment for testing tool execution, local context memory, browser interaction, and assistive automation.',
+      'Friday is an experimental AI environment exploring what happens when artificial intelligence moves beyond passive conversation and becomes part of the system around us.',
+      'An ongoing exploration investigating voice interaction, contextual awareness, desktop control, file operations, and intelligent automation.',
     ],
     featuresHeading: 'RESEARCH & DEVELOPMENT OBJECTIVES',
     features: [
@@ -229,12 +227,12 @@ export const PROJECTS: Project[] = [
           'Interfacing with desktop applications and Windows media controls.',
       },
     ],
-    techStack: ['JavaScript', 'Python', 'Electron', 'HTML / CSS', 'LLM Tooling'],
+    techStack: ['JavaScript', 'Python', 'Electron', 'HTML & CSS', 'LLM Tooling'],
     platforms: ['Desktop Research Environment (Windows)'],
     tags: ['AI', 'AUTOMATION', 'VOICE', 'EXPERIMENTAL'],
     textSpecimens: [
       {
-        windowLabel: 'FRIDAY SPECIMEN',
+        windowLabel: 'FRIDAY / PROJECT SPECIMEN',
         modeLabel: 'VIEW 01 — COMMAND & WORKFLOW DISPATCH',
         primaryLines: [
           'Ask Friday anything...',
@@ -274,17 +272,17 @@ export const PROJECTS: Project[] = [
     number: '03',
     slug: 'things',
     name: 'Things',
-    category: 'PRODUCTIVITY / AI',
-    filterCategories: ['APPS', 'AI', 'EXPERIMENTS'],
+    category: 'PRODUCTIVITY / INTELLIGENT SYSTEMS',
+    filterCategories: ['APPLICATIONS', 'AI & SYSTEMS', 'EXPERIMENTS'],
     status: 'PLANNING / EXPERIMENTAL',
-    leadHook: 'Give your thoughts somewhere to go.',
-    tagline: 'GIVE YOUR THOUGHTS SOMEWHERE TO GO.',
+    leadHook: 'Make room for everything on your mind.',
+    tagline: 'MAKE ROOM FOR EVERYTHING ON YOUR MIND.',
     shortDescription:
-      'An experiment in turning unstructured thoughts into organised ideas, plans, and actions.',
+      'An exploration of personal organisation and the relationship between thoughts, information, and action. Turning unstructured ideas into something easier to understand, organise, and act upon.',
     exploreLabel: 'EXPLORE THINGS',
     overview: [
-      'Things is an AI-assisted personal organisation application concept exploring calmer, lower-friction ways to capture thoughts and everyday responsibilities.',
-      'The project investigates how unstructured natural-language input can be transformed into clear, structured ideas, plans, and actions without heavy manual categorisation.',
+      'Things is an exploration of personal organisation and the relationship between thoughts, information, and action.',
+      'The project investigates how unstructured ideas can be turned into something easier to understand, organise, and act upon through calm interface design and intelligent parsing.',
     ],
     featuresHeading: 'CONCEPTUAL EXPLORATIONS',
     features: [
@@ -309,11 +307,11 @@ export const PROJECTS: Project[] = [
     tags: ['PRODUCTIVITY', 'AI', 'ORGANISATION', 'CONCEPT'],
     textSpecimens: [
       {
-        windowLabel: 'THINGS SPECIMEN',
+        windowLabel: 'THINGS / PROJECT SPECIMEN',
         modeLabel: 'VIEW 01 — STRUCTURED VIEWS',
         primaryLines: [
-          "[ INBOX ]   Capture what's on your mind",
-          '[ TODAY ]   What matters right now',
+          "[ INBOX ] Capture what's on your mind",
+          '[ TODAY ] What matters right now',
           "[ PLANNED ] What's coming next",
           '[ SOMEDAY ] Ideas worth keeping',
         ],

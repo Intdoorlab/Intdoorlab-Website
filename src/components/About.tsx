@@ -12,7 +12,7 @@ export function About() {
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         {/* Section Identifier */}
         <div className="font-mono-tech text-xs tracking-[0.2em] text-[var(--muted)]">
-          / 03
+          / {STUDIO_CONFIG.aboutSectionLabel}
         </div>
 
         {/* Main Three-Column Architectural Composition */}
@@ -63,7 +63,7 @@ export function About() {
             {/* Focus Areas */}
             <div>
               <div className="font-mono-tech text-xs tracking-[0.18em] text-[var(--muted)] uppercase">
-                // FOCUS
+                {STUDIO_CONFIG.areasHeading}
               </div>
               <ul className="mt-4 space-y-2 text-sm text-[var(--fg)]">
                 {STUDIO_CONFIG.focusAreas.map((area) => (
@@ -80,7 +80,7 @@ export function About() {
             {/* Technologies */}
             <div>
               <div className="font-mono-tech text-xs tracking-[0.18em] text-[var(--muted)] uppercase">
-                // TECHNOLOGIES
+                {STUDIO_CONFIG.technologiesHeading}
               </div>
               <div className="mt-4 flex flex-wrap gap-2">
                 {STUDIO_CONFIG.technologies.map((tech) => (
@@ -98,8 +98,13 @@ export function About() {
 
         {/* Conceptual Breakdown: INT / DOOR / LAB */}
         <div className="mt-16 sm:mt-20 border-t border-[var(--line)] pt-10">
-          <div className="font-mono-tech text-[11px] tracking-[0.18em] text-[var(--muted)] uppercase mb-6">
-            {STUDIO_CONFIG.nameSectionLabel}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+            <span className="font-mono-tech text-[11px] tracking-[0.18em] text-[var(--muted)] uppercase">
+              {STUDIO_CONFIG.nameSectionLabel}
+            </span>
+            <span className="font-mono-tech text-xs tracking-[0.2em] font-semibold text-[var(--fg)]">
+              {STUDIO_CONFIG.nameSectionTitle}
+            </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 border border-[var(--line)] divide-y md:divide-y-0 md:divide-x divide-[var(--line)]">

@@ -19,7 +19,7 @@ export function Notes() {
     >
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         <div className="font-mono-tech text-xs tracking-[0.2em] text-[var(--muted)]">
-          / 04
+          / {NOTES_SECTION_COPY.sectionLabel}
         </div>
 
         <div className="mt-4 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end border-b border-[var(--line)] pb-8">
@@ -28,10 +28,13 @@ export function Notes() {
               id="notes-heading"
               className="text-3xl sm:text-4xl font-bold leading-[1.06] tracking-[-0.03em] text-[var(--fg)] uppercase"
             >
-              NOTES
+              {NOTES_SECTION_COPY.title}
             </h2>
             <p className="mt-3 text-sm sm:text-base font-medium text-[var(--fg)]">
               {NOTES_SECTION_COPY.lead}
+            </p>
+            <p className="mt-1 text-xs font-mono-tech tracking-[0.12em] uppercase text-[var(--muted)]">
+              {NOTES_SECTION_COPY.subLead}
             </p>
           </div>
 

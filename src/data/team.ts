@@ -7,14 +7,7 @@ export interface TeamMember {
   educationLines?: string[];
   bio: string[];
   areasOfContribution: string[];
-  /**
-   * Optional portrait path (e.g. "/team/teng-rui.jpg").
-   * Leave empty to render a clean typographic monogram frame.
-   */
   photoUrl?: string;
-  /**
-   * Optional verified profile links. Leave empty to omit.
-   */
   links?: {
     github?: string;
     linkedin?: string;
@@ -23,41 +16,37 @@ export interface TeamMember {
 }
 
 export const TEAM_SECTION_COPY = {
-  heading: ['PEOPLE BEHIND', 'THE LAB'],
-  statement: 'Different minds. Shared curiosity. Things worth building.',
+  sectionLabel: '// THE PEOPLE BEHIND THE LAB',
+  statement: 'BUILT BY CURIOUS MINDS.',
   paragraphs: [
-    'IntDoorLab is shaped by the people behind its projects.',
-    'A growing team of individuals bringing different perspectives, skills, and ideas into the process of making things.',
+    'IntDoorLab is an independent initiative founded by Teng Rui Tan, with room for different minds, perspectives, and disciplines to come together.',
+    'The lab grows through the people, collaborations, and ideas that contribute to its projects.',
   ],
 };
 
-/**
- * Confirmed studio members.
- * Add additional TeamMember entries here as the studio expands;
- * the Team component automatically adapts from single-member layout to a multi-column grid.
- */
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: 'teng-rui',
     name: 'TENG RUI',
     nativeName: '廷睿',
-    role: 'FOUNDER & DEVELOPER',
+    role: 'FOUNDER / DEVELOPER',
     location: 'MALAYSIA / IRELAND',
     educationLines: [
       'BSc (Hons) Computer Networks & Cyber Security',
       'Technological University of the Shannon (TUS)',
     ],
     bio: [
-      'Founder of IntDoorLab, working across product concepts, software engineering, and technical development.',
-      'Interested in the intersection of software, AI, cybersecurity, and human-computer interaction.',
-      'Always exploring something new, usually by building it.',
+      'Founder of IntDoorLab, exploring the intersection of technology, engineering, and creative problem-solving.',
+      'Working across software development, intelligent systems, cybersecurity, and product experimentation.',
+      "Driven by curiosity, an interest in understanding how things work, and the desire to build things that don't already exist.",
     ],
     areasOfContribution: [
-      'Software Development',
+      'Software Engineering',
       'Technical Direction',
       'Product Development',
       'Systems & Security',
       'Interface Engineering',
+      'Research & Experimentation',
     ],
     photoUrl: '',
     links: {

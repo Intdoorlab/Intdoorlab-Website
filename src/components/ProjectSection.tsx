@@ -29,7 +29,7 @@ export function ProjectSection() {
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         {/* Section Index */}
         <div className="font-mono-tech text-xs tracking-[0.2em] text-[var(--muted)]">
-          / 02
+          / {STUDIO_CONFIG.projectsSectionLabel}
         </div>
 
         {/* Heading + Supporting Copy + Filter Bar */}
@@ -39,12 +39,15 @@ export function ProjectSection() {
               id="projects-heading"
               className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-[1.04] tracking-[-0.03em] text-[var(--fg)] uppercase"
             >
-              <span className="block">CURRENTLY</span>
-              <span className="block">BUILDING</span>
+              {STUDIO_CONFIG.projectsHeading.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </h2>
 
-            <p className="max-w-[320px] font-mono-tech text-xs sm:text-[13px] leading-[1.65] text-[var(--muted)] pb-0.5">
-              {STUDIO_CONFIG.currentlyBuildingSubtitle}
+            <p className="max-w-[340px] font-mono-tech text-xs sm:text-[13px] leading-[1.65] text-[var(--muted)] pb-0.5">
+              {STUDIO_CONFIG.projectsSubtitle}
             </p>
           </div>
 

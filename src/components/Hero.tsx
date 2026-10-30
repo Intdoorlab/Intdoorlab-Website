@@ -116,8 +116,8 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
                 >
                   /
                 </div>
-                <div className="font-mono-tech text-sm font-medium tracking-[0.2em] mt-0.5">
-                  01
+                <div className="font-mono-tech text-xs sm:text-sm font-medium tracking-[0.16em] mt-0.5">
+                  {STUDIO_CONFIG.heroSectionLabel}
                 </div>
                 <div
                   className="mt-3 h-px w-6"
@@ -126,9 +126,9 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
               </div>
 
               <div className="lg:mt-6 space-y-1 font-mono-tech text-[11px] tracking-[0.18em] uppercase">
-                <div>IDEAS</div>
-                <div>EXPERIMENTS</div>
-                <div>SOFTWARE</div>
+                {STUDIO_CONFIG.heroKeywords.map((kw) => (
+                  <div key={kw}>{kw}</div>
+                ))}
                 <div
                   className="pt-2 tracking-[0.22em]"
                   style={{ color: secondaryTextColor }}
@@ -177,8 +177,7 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
                     borderColor: primaryTextColor,
                   }}
                 >
-                  <span>EXPLORE PROJECTS</span>
-                  <span aria-hidden="true">&rarr;</span>
+                  <span>[{STUDIO_CONFIG.heroCta}]</span>
                 </Link>
               </div>
             </div>
@@ -213,7 +212,7 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
                 className="font-mono-tech text-[11px] tracking-[0.22em] uppercase"
                 style={{ color: secondaryTextColor }}
               >
-                [ SCROLL ]
+                {STUDIO_CONFIG.scrollLabel}
               </span>
               <span
                 className="block h-6 w-px"
