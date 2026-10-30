@@ -20,7 +20,7 @@ export function ThemeToggle({ className = '' }: { className?: string }) {
     <div
       role="radiogroup"
       aria-label="Colour theme"
-      className={`relative grid grid-cols-2 border border-current font-mono-tech text-[10px] tracking-[0.18em] uppercase ${className}`}
+      className={`relative inline-grid grid-cols-2 border border-current font-mono-tech text-[11px] tracking-[0.16em] uppercase self-center leading-none ${className}`}
     >
       {/* Sliding solid indicator */}
       <span
@@ -38,15 +38,15 @@ export function ThemeToggle({ className = '' }: { className?: string }) {
             role="radio"
             aria-checked={isActive}
             onClick={() => setTheme(option.value)}
-            className="relative z-10 px-2.5 py-1 cursor-pointer transition-colors duration-[520ms] ease-[cubic-bezier(0.76,0,0.24,1)] motion-reduce:transition-none"
+            className="relative z-10 px-3 py-1.5 flex items-center justify-center cursor-pointer transition-colors duration-[520ms] ease-[cubic-bezier(0.76,0,0.24,1)] motion-reduce:transition-none"
           >
             {/* Active label is cut out of the solid block using the page background colour */}
             <span
-              className={
+              className={`leading-none ${
                 isActive
-                  ? 'text-[var(--nav-bg,var(--bg))]'
+                  ? 'text-[var(--nav-bg,var(--bg))] font-medium'
                   : 'opacity-60 hover:opacity-100'
-              }
+              }`}
             >
               {option.label}
             </span>

@@ -99,7 +99,7 @@ export function Navigation({ invertedOverHero = false }: NavigationProps) {
         {/* Desktop Navigation */}
         <nav
           aria-label="Primary studio navigation"
-          className="hidden md:flex items-center gap-8 lg:gap-10"
+          className="hidden md:flex items-center gap-7 lg:gap-8"
         >
           {NAV_ITEMS.map((item) => {
             const isActive = activeSection === item.sectionId;
@@ -107,11 +107,11 @@ export function Navigation({ invertedOverHero = false }: NavigationProps) {
               <Link
                 key={item.sectionId}
                 href={item.href}
-                className="group relative py-1 font-mono-tech text-xs tracking-[0.16em] uppercase flex items-center gap-2"
+                className="group relative flex items-center gap-1.5 py-1 font-mono-tech text-xs tracking-[0.16em] uppercase leading-none"
               >
                 <span className={mutedClass}>[{item.index}]</span>
                 <span
-                  className={`relative pb-0.5 ${
+                  className={`relative pb-0.5 leading-none ${
                     isActive
                       ? 'border-b border-current font-medium'
                       : 'border-b border-transparent group-hover:border-current'
@@ -124,21 +124,21 @@ export function Navigation({ invertedOverHero = false }: NavigationProps) {
           })}
 
           {/* Studio Indicator [ ● ] */}
-          <div className="relative">
+          <div className="relative flex items-center">
             <button
               type="button"
               onClick={() => setStatusOpen((prev) => !prev)}
               aria-expanded={statusOpen}
               aria-label="Toggle studio status readout"
-              className="font-mono-tech text-xs tracking-[0.18em] px-1.5 py-1 transition-opacity hover:opacity-70 cursor-pointer flex items-center gap-1.5"
+              className="font-mono-tech text-xs tracking-[0.18em] px-1 py-1 transition-opacity hover:opacity-70 cursor-pointer flex items-center gap-1.5 leading-none"
             >
-              <span className={mutedClass}>[</span>
+              <span className={`${mutedClass} leading-none`}>[</span>
               <span
                 className="inline-block h-2 w-2 bg-current"
                 style={{ borderRadius: '9999px' }}
                 aria-hidden="true"
               />
-              <span className={mutedClass}>]</span>
+              <span className={`${mutedClass} leading-none`}>]</span>
             </button>
 
             {statusOpen && (
