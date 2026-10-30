@@ -61,9 +61,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
     photoUrl: '',
     links: {
-      // Update with your personal or studio GitHub & LinkedIn URLs
       github: 'https://github.com/Afugegege',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/triston-tan-teng-rui/',
     },
   },
 ];
