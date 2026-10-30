@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Theme tokens
+   Light is the default studio palette. Dark is a strict monochrome inversion.
+   ========================================================================== */
+:root,
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg: #FAFAFA;
+  --fg: #111111;
+  --muted: #777777;
+  --line: #E5E5E5;
+
+  /* Inverse surfaces (e.g. dark specimen panels on a light page) */
+  --inv-line: #2B2B2B;
+  --inv-muted: #9A9A9A;
+  --inv-surface: #161616;
+
+  /* Door element tokens */
+  --door-fill: #111111;
+  --door-opening: #FAFAFA;
+  --door-stroke: transparent;
+
+  /* Homepage hero scroll endpoints: light -> near-black */
+  --hero-bg-start: #FAFAFA;
+  --hero-bg-end: #111111;
+  --hero-fg-start: #111111;
+  --hero-fg-end: #FAFAFA;
+  --hero-muted-start: #777777;
+  --hero-muted-end: #A0A0A0;
+  --hero-border-start: #E5E5E5;
+  --hero-border-end: #383838;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111111;
+  --fg: #FAFAFA;
+  --muted: #8C8C8C;
+  --line: #262626;
+
+  --inv-line: #D9D9D9;
+  --inv-muted: #6B6B6B;
+  --inv-surface: #EFEFEF;
+
+  /* Door element tokens: solid white door on #111111 dark doorway (exact opposite of light theme) */
+  --door-fill: #FAFAFA;
+  --door-opening: #111111;
+  --door-stroke: none;
+
+  /* Homepage hero scroll endpoints: dark (#111111) -> light (#FAFAFA) as the white door closes */
+  --hero-bg-start: #111111;
+  --hero-bg-end: #FAFAFA;
+  --hero-fg-start: #FAFAFA;
+  --hero-fg-end: #111111;
+  --hero-muted-start: #8C8C8C;
+  --hero-muted-end: #777777;
+  --hero-border-start: #262626;
+  --hero-border-end: #E5E5E5;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+
+  html {
+    background-color: var(--bg);
+    color: var(--fg);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-geist-sans), "Helvetica Neue", Inter, Arial, sans-serif;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background-color: var(--fg);
+    color: var(--bg);
+  }
+}
+
+.font-mono-tech {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* ==========================================================================
+   Homepage hero stage — colours resolved from scroll progress + active theme
+   (--hero-bg-t / --hero-fg-t are set from JS in the range 0..1)
+   ========================================================================== */
+.hero-stage {
+  --hero-bg: color-mix(in srgb, var(--hero-bg-end) calc(var(--hero-bg-t, 0) * 100%), var(--hero-bg-start));
+  --hero-fg: color-mix(in srgb, var(--hero-fg-end) calc(var(--hero-fg-t, 0) * 100%), var(--hero-fg-start));
+  --hero-muted: color-mix(in srgb, var(--hero-muted-end) calc(var(--hero-fg-t, 0) * 100%), var(--hero-muted-start));
+  --hero-border: color-mix(in srgb, var(--hero-border-end) calc(var(--hero-fg-t, 0) * 100%), var(--hero-border-start));
+  background-color: var(--hero-bg);
+  color: var(--hero-fg);
+}
+
+/* ==========================================================================
+   Theme switch transition — a flat 2D "door sweep" wipe
+   Switching to dark sweeps in from the left (door closing),
+   switching to light sweeps in from the right (door opening).
+   ========================================================================== */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html[data-theme-sweep="to-dark"]::view-transition-new(root) {
+  animation: theme-sweep-from-left 760ms cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+
+html[data-theme-sweep="to-light"]::view-transition-new(root) {
+  animation: theme-sweep-from-right 760ms cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+
+@keyframes theme-sweep-from-left {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes theme-sweep-from-right {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Fallback for browsers without View Transitions: brief, flat colour crossfade */
+html.theme-fading,
+html.theme-fading *,
+html.theme-fading *::before,
+html.theme-fading *::after {
+  transition:
+    background-color 420ms cubic-bezier(0.76, 0, 0.24, 1),
+    color 420ms cubic-bezier(0.76, 0, 0.24, 1),
+    border-color 420ms cubic-bezier(0.76, 0, 0.24, 1),
+    fill 420ms cubic-bezier(0.76, 0, 0.24, 1) !important;
+}
+
+/* Subtle blinking editorial terminal cursor bar used on headlines */
+@keyframes cursorPulse {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0.18;
+  }
+}
+
+.editorial-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.86em;
+  background-color: currentColor;
+  vertical-align: -0.08em;
+  margin-left: 0.14em;
+  animation: cursorPulse 1.25s steps(1, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-cursor {
+    animation: none;
+    opacity: 1;
+  }
+}

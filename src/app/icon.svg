@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #FAFAFA; }
+    .fg-stroke { stroke: #111111; }
+    .fg-fill { fill: #111111; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #111111; }
+      .fg-stroke { stroke: #FAFAFA; }
+      .fg-fill { fill: #FAFAFA; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64"/>
+  <polygon class="fg-stroke" points="14,12 50,6 50,58 14,52" fill="none" stroke-width="2.5"/>
+  <polygon class="fg-fill" points="14,12 31,17 31,47 14,52"/>
+</svg>
