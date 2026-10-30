@@ -38,8 +38,8 @@ export function Footer() {
             </h2>
           </div>
 
-          {/* Right: Supporting Statement & Contact Channels */}
-          <div className="lg:col-span-5 lg:border-l lg:border-[var(--line)] lg:pl-12 flex flex-col justify-between gap-10">
+          {/* Right: Supporting Statement & Contact Action */}
+          <div className="lg:col-span-5 lg:border-l lg:border-[var(--line)] lg:pl-12 flex flex-col justify-between gap-8">
             <div>
               <div className="font-mono-tech text-xs tracking-[0.2em] text-[var(--muted)]">
                 //
@@ -72,55 +72,15 @@ export function Footer() {
                   {STUDIO_CONFIG.email}
                 </a>
               </div>
-
-              <div className="mt-6">
-                <a
-                  href={`mailto:${STUDIO_CONFIG.email}`}
-                  className="inline-flex items-center gap-3 border border-[var(--fg)] px-5 py-3 font-mono-tech text-xs tracking-[0.18em] text-[var(--fg)] uppercase transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
-                >
-                  <span>[ {STUDIO_CONFIG.contactCtaLabel}</span>
-                  <span aria-hidden="true">&nearr; ]</span>
-                </a>
-              </div>
             </div>
 
-            {/* External Profile Links */}
-            <div className="divide-y divide-[var(--line)] border-t border-b border-[var(--line)] font-mono-tech text-xs tracking-[0.18em] uppercase">
-              {/* GitHub */}
-              {STUDIO_CONFIG.links.github ? (
-                <a
-                  href={STUDIO_CONFIG.links.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between py-3.5 text-[var(--fg)] transition-opacity hover:opacity-70"
-                >
-                  <span>GITHUB</span>
-                  <span aria-hidden="true">&nearr;</span>
-                </a>
-              ) : (
-                <div className="flex items-center justify-between py-3.5 text-[var(--muted)]">
-                  <span>GITHUB</span>
-                  <span aria-hidden="true">&nearr;</span>
-                </div>
-              )}
-
-              {/* LinkedIn */}
-              {STUDIO_CONFIG.links.linkedin ? (
-                <a
-                  href={STUDIO_CONFIG.links.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between py-3.5 text-[var(--fg)] transition-opacity hover:opacity-70"
-                >
-                  <span>LINKEDIN</span>
-                  <span aria-hidden="true">&nearr;</span>
-                </a>
-              ) : (
-                <div className="flex items-center justify-between py-3.5 text-[var(--muted)]">
-                  <span>LINKEDIN</span>
-                  <span aria-hidden="true">&nearr;</span>
-                </div>
-              )}
+            <div>
+              <a
+                href={`mailto:${STUDIO_CONFIG.email}`}
+                className="inline-flex items-center border border-[var(--fg)] px-6 py-3.5 font-mono-tech text-xs tracking-[0.18em] text-[var(--fg)] uppercase transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
+              >
+                [ {STUDIO_CONFIG.contactCtaLabel} ]
+              </a>
             </div>
           </div>
         </div>

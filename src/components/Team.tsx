@@ -158,39 +158,49 @@ export function Team() {
                   </div>
                 )}
 
-                {/* Optional Member Links (Only shown if verified URLs are provided) */}
-                {(member.links?.github ||
-                  member.links?.linkedin ||
-                  member.links?.website) && (
-                  <div className="mt-6 flex flex-wrap gap-5 border-t border-[var(--line)] pt-4 font-mono-tech text-xs tracking-[0.16em] uppercase">
-                    {member.links.github && (
-                      <a
-                        href={member.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[var(--fg)] hover:opacity-70"
-                      >
-                        GITHUB &nearr;
-                      </a>
-                    )}
-                    {member.links.linkedin && (
-                      <a
-                        href={member.links.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[var(--fg)] hover:opacity-70"
-                      >
-                        LINKEDIN &nearr;
-                      </a>
-                    )}
+                {/* Profile Links (GitHub & LinkedIn) */}
+                {member.links && (
+                  <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-[var(--line)] pt-5 font-mono-tech text-xs tracking-[0.16em] uppercase">
+                    {'github' in member.links &&
+                      (member.links.github ? (
+                        <a
+                          href={member.links.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="border border-[var(--fg)] px-4 py-2 text-[var(--fg)] transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
+                        >
+                          GITHUB &rarr;
+                        </a>
+                      ) : (
+                        <span className="border border-[var(--line)] px-4 py-2 text-[var(--muted)]">
+                          GITHUB
+                        </span>
+                      ))}
+
+                    {'linkedin' in member.links &&
+                      (member.links.linkedin ? (
+                        <a
+                          href={member.links.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="border border-[var(--fg)] px-4 py-2 text-[var(--fg)] transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
+                        >
+                          LINKEDIN &rarr;
+                        </a>
+                      ) : (
+                        <span className="border border-[var(--line)] px-4 py-2 text-[var(--muted)]">
+                          LINKEDIN
+                        </span>
+                      ))}
+
                     {member.links.website && (
                       <a
                         href={member.links.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[var(--fg)] hover:opacity-70"
+                        className="border border-[var(--fg)] px-4 py-2 text-[var(--fg)] transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
                       >
-                        WEBSITE &nearr;
+                        WEBSITE &rarr;
                       </a>
                     )}
                   </div>

@@ -61,7 +61,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
     photoUrl: '',
     links: {
-      github: '',
+      // Update with your personal or studio GitHub & LinkedIn URLs
+      github: 'https://github.com/Afugegege',
       linkedin: '',
     },
   },
