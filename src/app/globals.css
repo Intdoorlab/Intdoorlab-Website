@@ -75,19 +75,25 @@ html[data-theme="dark"] {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-size: 16px;
+    font-size: 15px;
   }
 
-  /* Calibrated proportional desktop boost */
+  /* Well-calibrated desktop scale: keeps all hero elements comfortably within viewport bounds */
   @media (min-width: 1024px) {
     html {
-      font-size: 19px;
+      font-size: 15.5px;
     }
   }
 
-  @media (min-width: 1536px) {
+  @media (min-width: 1440px) {
     html {
-      font-size: 20.5px;
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    html {
+      font-size: 17px;
     }
   }
 

@@ -29,7 +29,7 @@ export function DoorAnimation({
     <div className="relative flex items-center justify-center lg:justify-end">
       <div className="flex items-center gap-4 sm:gap-7">
         {/* Main Binary Door SVG */}
-        <div className="w-[250px] sm:w-[290px] lg:w-[325px] xl:w-[350px] shrink-0">
+        <div className="w-[210px] sm:w-[250px] lg:w-[275px] xl:w-[295px] shrink-0">
           <BinaryDoorFrame
             closeProgress={effectiveClose}
             binaryColor={binaryColor}

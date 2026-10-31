@@ -96,7 +96,7 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
     >
       {/* Sticky full-viewport stage that darkens as the binary door closes */}
       <div
-        className="hero-stage sticky top-0 flex min-h-screen flex-col justify-between pt-20 pb-8 sm:pt-24 sm:pb-10 overflow-hidden"
+        className="hero-stage sticky top-0 flex min-h-screen flex-col justify-between pt-16 pb-5 sm:pt-20 sm:pb-6 overflow-hidden"
         style={
           {
             '--hero-bg-t': backgroundMix.toFixed(4),
@@ -105,10 +105,10 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
         }
       >
         {/* Main Asymmetric Editorial Grid */}
-        <div className="mx-auto my-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-14">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center lg:gap-8">
+        <div className="mx-auto my-auto w-full max-w-[1400px] px-5 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center lg:gap-8">
             {/* Far-Left Section Identifier & Keywords Column */}
-            <div className="lg:col-span-2 flex lg:flex-col justify-between lg:justify-start items-start gap-6 lg:self-start lg:pt-3">
+            <div className="lg:col-span-2 flex lg:flex-col justify-between lg:justify-start items-start gap-4 lg:self-start lg:pt-2">
               <div>
                 <div
                   className="font-mono-tech text-xs tracking-[0.2em]"
@@ -116,21 +116,21 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
                 >
                   /
                 </div>
-                <div className="font-mono-tech text-xs sm:text-sm font-medium tracking-[0.16em] mt-0.5">
+                <div className="font-mono-tech text-xs tracking-[0.16em] mt-0.5">
                   {STUDIO_CONFIG.heroSectionLabel}
                 </div>
                 <div
-                  className="mt-3 h-px w-6"
+                  className="mt-2.5 h-px w-6"
                   style={{ backgroundColor: primaryTextColor }}
                 />
               </div>
 
-              <div className="lg:mt-6 space-y-1 font-mono-tech text-[11px] tracking-[0.18em] uppercase">
+              <div className="lg:mt-5 space-y-1 font-mono-tech text-[10.5px] tracking-[0.18em] uppercase">
                 {STUDIO_CONFIG.heroKeywords.map((kw) => (
                   <div key={kw}>{kw}</div>
                 ))}
                 <div
-                  className="pt-2 tracking-[0.22em]"
+                  className="pt-1.5 tracking-[0.22em]"
                   style={{ color: secondaryTextColor }}
                 >
                   //
@@ -139,8 +139,8 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
             </div>
 
             {/* Center-Left Editorial Headline & Studio Statement */}
-            <div className="lg:col-span-6">
-              <h1 className="text-[2.75rem] leading-[0.98] sm:text-6xl lg:text-[4.25rem] xl:text-[5rem] font-bold tracking-[-0.035em] uppercase">
+            <div className="lg:col-span-6 xl:col-span-6">
+              <h1 className="text-[2.25rem] leading-[1] sm:text-5xl lg:text-[3.25rem] xl:text-[3.85rem] font-bold tracking-[-0.035em] uppercase">
                 {STUDIO_CONFIG.heroHeadline.map((line, index) => {
                   const isLast = index === STUDIO_CONFIG.heroHeadline.length - 1;
                   return (
@@ -154,25 +154,25 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
                 })}
               </h1>
 
-              <div className="mt-7 sm:mt-8 max-w-[560px] space-y-3">
+              <div className="mt-5 sm:mt-6 max-w-[520px] space-y-2">
                 <p
-                  className="text-base sm:text-lg font-medium leading-[1.6]"
+                  className="text-sm sm:text-[15px] font-medium leading-[1.5]"
                   style={{ color: primaryTextColor }}
                 >
                   {STUDIO_CONFIG.heroLead}
                 </p>
                 <p
-                  className="font-mono-tech text-sm leading-[1.75]"
+                  className="font-mono-tech text-xs sm:text-[13px] leading-[1.65]"
                   style={{ color: secondaryTextColor }}
                 >
                   {STUDIO_CONFIG.heroDescription}
                 </p>
               </div>
 
-              <div className="mt-8 sm:mt-10">
+              <div className="mt-6 sm:mt-7">
                 <Link
                   href="#projects"
-                  className="inline-flex items-center gap-4 border px-7 py-4 font-mono-tech text-xs tracking-[0.18em] uppercase transition-colors duration-150 hover:bg-[var(--hero-fg)] hover:text-[var(--hero-bg)]"
+                  className="inline-flex items-center gap-4 border px-6 py-3 font-mono-tech text-xs tracking-[0.18em] uppercase transition-colors duration-150 hover:bg-[var(--hero-fg)] hover:text-[var(--hero-bg)]"
                   style={{
                     borderColor: primaryTextColor,
                   }}
@@ -183,7 +183,7 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
             </div>
 
             {/* Right Column — Signature Binary Door */}
-            <div className="lg:col-span-4">
+            <div className="lg:col-span-4 xl:col-span-4">
               <DoorAnimation
                 closeProgress={doorCloseProgress}
                 binaryColor={binaryColor}
@@ -197,7 +197,7 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
         {/* Bottom Scroll Cue + Progress Line */}
         <div className="mx-auto w-full max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div
-            className="flex items-end justify-between border-t pt-4"
+            className="flex items-end justify-between border-t pt-3"
             style={{ borderColor }}
           >
             <div
@@ -207,15 +207,15 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
               INT // DOOR // LAB
             </div>
 
-            <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center gap-1.5">
               <span
-                className="font-mono-tech text-[11px] tracking-[0.22em] uppercase"
+                className="font-mono-tech text-[10.5px] tracking-[0.2em] uppercase"
                 style={{ color: secondaryTextColor }}
               >
                 {STUDIO_CONFIG.scrollLabel}
               </span>
               <span
-                className="block h-6 w-px"
+                className="block h-5 w-px"
                 style={{ backgroundColor: secondaryTextColor }}
                 aria-hidden="true"
               />
