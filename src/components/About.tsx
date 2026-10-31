@@ -30,8 +30,8 @@ export function About() {
               ))}
             </h2>
 
-            <div className="mt-7 space-y-4 text-sm sm:text-[14.5px] leading-[1.78] text-[var(--muted)]">
-              <p className="text-base sm:text-lg font-medium text-[var(--fg)]">
+            <div className="mt-7 space-y-4 text-[15px] sm:text-base leading-[1.75] text-[var(--fg)]/85">
+              <p className="text-base sm:text-lg font-medium text-[var(--fg)] leading-snug">
                 {STUDIO_CONFIG.aboutLead}
               </p>
 
@@ -121,7 +121,7 @@ export function About() {
                 <div className="mt-2 font-mono-tech text-[11px] tracking-[0.14em] text-[var(--fg)] uppercase">
                   {item.meaning}
                 </div>
-                <p className="mt-3 text-[13.5px] leading-[1.68] text-[var(--muted)]">
+                <p className="mt-3 text-sm sm:text-[14.5px] leading-relaxed text-[var(--fg)]/85">
                   {item.description}
                 </p>
               </div>

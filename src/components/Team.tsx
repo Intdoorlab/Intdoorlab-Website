@@ -35,9 +35,9 @@ export function Team() {
             </h2>
           </div>
 
-          <div className="lg:col-span-7 lg:pl-8 space-y-2.5">
+          <div className="lg:col-span-7 lg:pl-8 space-y-3">
             {TEAM_SECTION_COPY.paragraphs.map((line, i) => (
-              <p key={i} className="text-sm leading-relaxed text-[var(--muted)]">
+              <p key={i} className="text-[14.5px] sm:text-[15px] leading-relaxed text-[var(--fg)]/85">
                 {line}
               </p>
             ))}
@@ -126,7 +126,7 @@ export function Team() {
                   </div>
                 )}
 
-                <div className="mt-4 space-y-2.5 text-sm leading-[1.75] text-[var(--muted)]">
+                <div className="mt-4 space-y-3 text-[14.5px] sm:text-[15px] leading-relaxed text-[var(--fg)]/85">
                   {member.bio.map((line, idx) => (
                     <p key={idx}>{line}</p>
                   ))}

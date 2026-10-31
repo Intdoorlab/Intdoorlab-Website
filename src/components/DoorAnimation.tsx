@@ -42,15 +42,15 @@ export function DoorAnimation({
         {/* Supporting Door Caption (Right of Door, matching reference composition) */}
         <div className="flex flex-col justify-between py-6 select-none">
           <span
-            className="font-mono-tech text-[11px] tracking-[0.2em] mb-5 block"
+            className="font-mono-tech text-[10px] tracking-[0.24em] mb-4 block opacity-50"
             style={{ color: secondaryTextColor }}
           >
             //
           </span>
 
           <div
-            className="font-mono-tech text-[11px] sm:text-xs leading-[1.65] tracking-[0.16em] uppercase"
-            style={{ color: binaryColor }}
+            className="font-mono-tech text-[10px] sm:text-[10.5px] leading-[1.7] tracking-[0.22em] uppercase"
+            style={{ color: secondaryTextColor }}
           >
             {STUDIO_CONFIG.doorCaption.map((word, idx) => (
               <div key={idx}>{word}</div>
@@ -58,7 +58,7 @@ export function DoorAnimation({
           </div>
 
           <div
-            className="font-mono-tech text-[10px] tracking-[0.18em] uppercase mt-8 tabular-nums"
+            className="font-mono-tech text-[9.5px] sm:text-[10px] tracking-[0.22em] uppercase mt-6 tabular-nums opacity-60"
             style={{ color: secondaryTextColor }}
             aria-hidden="true"
           >

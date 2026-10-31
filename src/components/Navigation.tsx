@@ -84,14 +84,14 @@ export function Navigation({ invertedOverHero = false }: NavigationProps) {
     >
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 sm:px-8 lg:px-12">
         {/* Brand Wordmark & Tagline */}
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-0.5 justify-center">
           <Link
             href="/"
-            className="text-sm sm:text-[15px] font-semibold tracking-[0.22em] uppercase transition-opacity hover:opacity-70"
+            className="text-sm sm:text-[15px] font-bold tracking-[0.22em] uppercase transition-opacity hover:opacity-70 leading-none"
           >
             {STUDIO_CONFIG.uppercaseName}
           </Link>
-          <span className="hidden lg:block font-mono-tech text-[9px] tracking-[0.14em] text-[var(--muted)] uppercase -mt-0.5">
+          <span className={`hidden sm:block font-mono-tech text-[11px] sm:text-[11.5px] tracking-[0.14em] uppercase leading-tight font-medium ${mutedClass}`}>
             {STUDIO_CONFIG.tagline}
           </span>
         </div>

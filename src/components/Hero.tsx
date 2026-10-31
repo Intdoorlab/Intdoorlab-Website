@@ -111,28 +111,25 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
             <div className="lg:col-span-2 flex lg:flex-col justify-between lg:justify-start items-start gap-4 lg:self-start lg:pt-2">
               <div>
                 <div
-                  className="font-mono-tech text-xs tracking-[0.2em]"
+                  className="font-mono-tech text-[10.5px] tracking-[0.22em] uppercase"
                   style={{ color: secondaryTextColor }}
                 >
-                  /
-                </div>
-                <div className="font-mono-tech text-xs tracking-[0.16em] mt-0.5">
-                  {STUDIO_CONFIG.heroSectionLabel}
+                  / {STUDIO_CONFIG.heroSectionLabel}
                 </div>
                 <div
                   className="mt-2.5 h-px w-6"
-                  style={{ backgroundColor: primaryTextColor }}
+                  style={{ backgroundColor: secondaryTextColor }}
                 />
               </div>
 
-              <div className="lg:mt-5 space-y-1 font-mono-tech text-[10.5px] tracking-[0.18em] uppercase">
+              <div
+                className="lg:mt-6 space-y-1.5 font-mono-tech text-[10px] sm:text-[10.5px] tracking-[0.22em] uppercase"
+                style={{ color: secondaryTextColor }}
+              >
                 {STUDIO_CONFIG.heroKeywords.map((kw) => (
                   <div key={kw}>{kw}</div>
                 ))}
-                <div
-                  className="pt-1.5 tracking-[0.22em]"
-                  style={{ color: secondaryTextColor }}
-                >
+                <div className="pt-1 tracking-[0.24em] opacity-60">
                   //
                 </div>
               </div>
@@ -154,16 +151,16 @@ export function Hero({ onHeroDarkStateChange }: HeroProps) {
                 })}
               </h1>
 
-              <div className="mt-5 sm:mt-6 max-w-[520px] space-y-2">
+              <div className="mt-5 sm:mt-6 max-w-[540px] space-y-3">
                 <p
-                  className="text-sm sm:text-[15px] font-medium leading-[1.5]"
+                  className="text-base sm:text-lg font-medium leading-snug tracking-tight"
                   style={{ color: primaryTextColor }}
                 >
                   {STUDIO_CONFIG.heroLead}
                 </p>
                 <p
-                  className="font-mono-tech text-xs sm:text-[13px] leading-[1.65]"
-                  style={{ color: secondaryTextColor }}
+                  className="text-[14.5px] sm:text-[15.5px] leading-[1.72] font-normal"
+                  style={{ color: primaryTextColor, opacity: 0.85 }}
                 >
                   {STUDIO_CONFIG.heroDescription}
                 </p>

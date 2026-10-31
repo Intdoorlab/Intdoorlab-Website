@@ -84,7 +84,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
               </p>
 
               {/* Editorial Overview */}
-              <div className="mt-6 space-y-4 text-sm leading-[1.78] text-[var(--muted)]">
+              <div className="mt-6 space-y-4 text-[15px] sm:text-base leading-[1.75] text-[var(--fg)]/85">
                 {project.overview.map((paragraph, idx) => (
                   <p key={idx}>{paragraph}</p>
                 ))}

@@ -49,7 +49,7 @@ export function Footer() {
                 {STUDIO_CONFIG.contactHeadingLabel}
               </div>
 
-              <div className="mt-3 space-y-1.5 text-sm leading-relaxed text-[var(--muted)]">
+              <div className="mt-3 space-y-1.5 text-[14.5px] sm:text-[15px] leading-relaxed text-[var(--fg)]/85">
                 {STUDIO_CONFIG.contactLines.map((line, idx) => (
                   <p
                     key={idx}

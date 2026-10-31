@@ -38,7 +38,7 @@ export function Notes() {
             </p>
           </div>
 
-          <div className="lg:col-span-7 lg:pl-8 space-y-2 text-sm leading-relaxed text-[var(--muted)]">
+          <div className="lg:col-span-7 lg:pl-8 space-y-2.5 text-[14.5px] sm:text-[15px] leading-relaxed text-[var(--fg)]/85">
             {NOTES_SECTION_COPY.paragraphs.map((line, idx) => (
               <p key={idx}>{line}</p>
             ))}
@@ -60,7 +60,7 @@ export function Notes() {
                   <h3 className="text-xl font-semibold text-[var(--fg)]">
                     {note.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+                  <p className="mt-2 text-[14px] leading-relaxed text-[var(--fg)]/80">
                     {note.summary}
                   </p>
                 </div>

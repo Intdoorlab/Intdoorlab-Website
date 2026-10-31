@@ -37,11 +37,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </Link>
           </h3>
 
-          <p className="mt-3 text-sm font-medium leading-[1.55] text-[var(--fg)]">
+          <p className="mt-3 text-[15px] font-medium leading-snug text-[var(--fg)]">
             {project.leadHook}
           </p>
 
-          <p className="mt-2 min-h-[3.75rem] text-[13.5px] leading-[1.68] text-[var(--muted)]">
+          <p className="mt-2 min-h-[3.75rem] text-[14px] leading-relaxed text-[var(--fg)]/80">
             {project.shortDescription}
           </p>
         </div>
