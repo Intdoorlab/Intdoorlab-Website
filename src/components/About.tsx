@@ -46,8 +46,8 @@ export function About() {
           </div>
 
           {/* Center: Signature Binary Door Emblem */}
-          <div className="lg:col-span-3 flex justify-center py-2">
-            <div className="w-[195px] sm:w-[220px]">
+          <div className="lg:col-span-3 flex justify-center py-2 sm:py-0">
+            <div className="w-[160px] xs:w-[185px] sm:w-[220px]">
               <BinaryDoorFrame
                 closeProgress={0}
                 binaryColor="var(--fg)"

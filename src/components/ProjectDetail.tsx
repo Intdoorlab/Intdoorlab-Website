@@ -178,7 +178,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
                       onClick={() =>
                         scrollToDetailBlock(item.key, item.targetId)
                       }
-                      className={`flex w-full items-center gap-6 py-1 text-left transition-colors cursor-pointer ${
+                      className={`flex w-full items-center gap-6 py-2 min-h-[40px] text-left transition-colors cursor-pointer ${
                         isCurrent
                           ? 'text-[var(--fg)] font-semibold'
                           : 'text-[var(--muted)] hover:text-[var(--fg)]'

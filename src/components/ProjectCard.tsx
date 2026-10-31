@@ -121,7 +121,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         <Link
           href={`/projects/${project.slug}`}
-          className="inline-flex items-center gap-1.5 font-mono-tech text-[11px] tracking-[0.15em] text-[var(--fg)] uppercase transition-transform duration-150 group-hover:translate-x-0.5"
+          className="inline-flex items-center gap-1.5 font-mono-tech text-[11px] tracking-[0.15em] text-[var(--fg)] uppercase transition-transform duration-150 group-hover:translate-x-0.5 min-h-[44px] py-1 px-1 -my-1 -mr-1"
         >
           <span>[{project.exploreLabel}]</span>
         </Link>

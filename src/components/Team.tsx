@@ -160,12 +160,12 @@ export function Team() {
                           href={member.links.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="border border-[var(--fg)] px-4 py-2 text-[var(--fg)] transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
+                          className="border border-[var(--fg)] px-4 py-2.5 min-h-[44px] inline-flex items-center justify-center text-[var(--fg)] transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
                         >
                           GITHUB &rarr;
                         </a>
                       ) : (
-                        <span className="border border-[var(--line)] px-4 py-2 text-[var(--muted)]">
+                        <span className="border border-[var(--line)] px-4 py-2.5 min-h-[44px] inline-flex items-center justify-center text-[var(--muted)]">
                           GITHUB
                         </span>
                       ))}
@@ -176,12 +176,12 @@ export function Team() {
                           href={member.links.linkedin}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="border border-[var(--fg)] px-4 py-2 text-[var(--fg)] transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
+                          className="border border-[var(--fg)] px-4 py-2.5 min-h-[44px] inline-flex items-center justify-center text-[var(--fg)] transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
                         >
                           LINKEDIN &rarr;
                         </a>
                       ) : (
-                        <span className="border border-[var(--line)] px-4 py-2 text-[var(--muted)]">
+                        <span className="border border-[var(--line)] px-4 py-2.5 min-h-[44px] inline-flex items-center justify-center text-[var(--muted)]">
                           LINKEDIN
                         </span>
                       ))}
@@ -191,7 +191,7 @@ export function Team() {
                         href={member.links.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="border border-[var(--fg)] px-4 py-2 text-[var(--fg)] transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
+                        className="border border-[var(--fg)] px-4 py-2.5 min-h-[44px] inline-flex items-center justify-center text-[var(--fg)] transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
                       >
                         WEBSITE &rarr;
                       </a>

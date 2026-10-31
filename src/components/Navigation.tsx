@@ -190,14 +190,14 @@ export function Navigation({ invertedOverHero = false }: NavigationProps) {
         </nav>
 
         {/* Mobile Controls */}
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-2 sm:gap-3 md:hidden">
           <ThemeToggle />
           <button
             type="button"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle navigation menu"
-            className="font-mono-tech text-xs tracking-[0.16em] uppercase py-1 px-2 border border-current cursor-pointer"
+            className="font-mono-tech text-xs tracking-[0.16em] uppercase py-2 px-2.5 border border-current cursor-pointer min-h-[38px] flex items-center justify-center transition-colors active:opacity-70"
           >
             {mobileMenuOpen ? '[ CLOSE ]' : '[ MENU ]'}
           </button>
@@ -208,27 +208,36 @@ export function Navigation({ invertedOverHero = false }: NavigationProps) {
       {mobileMenuOpen && (
         <nav
           aria-label="Mobile navigation"
-          className={`md:hidden border-t px-5 py-5 space-y-4 ${bgClass}`}
+          className={`md:hidden border-t px-5 py-6 space-y-3 ${bgClass}`}
         >
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.sectionId}
               href={item.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-between py-2 font-mono-tech text-xs tracking-[0.18em] uppercase border-b border-current/15"
+              className="flex items-center justify-between py-3 font-mono-tech text-sm tracking-[0.18em] uppercase border-b border-current/15 min-h-[44px] transition-colors active:opacity-60"
             >
               <span>
-                <span className={`${mutedClass} mr-2`}>[{item.index}]</span>
+                <span className={`${mutedClass} mr-2.5`}>[{item.index}]</span>
                 {item.label}
               </span>
-              <span>-&gt;</span>
+              <span aria-hidden="true">&rarr;</span>
             </Link>
           ))}
-          <div className="pt-2 flex items-center justify-between font-mono-tech text-[11px] tracking-[0.14em]">
-            <span className={mutedClass}>CONTACT</span>
-            <a href={`mailto:${STUDIO_CONFIG.email}`} className="underline underline-offset-4">
-              {STUDIO_CONFIG.email}
-            </a>
+          <div className="pt-3 flex flex-col gap-2 font-mono-tech text-xs tracking-[0.14em]">
+            <div className="flex items-center justify-between">
+              <span className={mutedClass}>IDENTITY</span>
+              <span>{STUDIO_CONFIG.tagline}</span>
+            </div>
+            <div className="flex items-center justify-between pt-1">
+              <span className={mutedClass}>CONTACT</span>
+              <a
+                href={`mailto:${STUDIO_CONFIG.email}`}
+                className="underline underline-offset-4 hover:opacity-80 break-all"
+              >
+                {STUDIO_CONFIG.email}
+              </a>
+            </div>
           </div>
         </nav>
       )}

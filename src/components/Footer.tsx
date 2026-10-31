@@ -22,7 +22,7 @@ export function Footer() {
           <div className="lg:col-span-7 flex flex-col justify-between">
             <h2
               id="contact-heading"
-              className="text-4xl sm:text-6xl lg:text-[4.25rem] font-bold leading-[0.98] tracking-[-0.035em] uppercase"
+              className="text-[2rem] xs:text-[2.5rem] sm:text-6xl lg:text-[4.25rem] font-bold leading-[1.02] tracking-[-0.035em] uppercase"
             >
               {STUDIO_CONFIG.contactHeadline.map((line, index) => {
                 const isLast = index === STUDIO_CONFIG.contactHeadline.length - 1;
@@ -67,7 +67,7 @@ export function Footer() {
               <div className="mt-6">
                 <a
                   href={`mailto:${STUDIO_CONFIG.email}`}
-                  className="inline-block border-b border-[var(--fg)] pb-1 font-mono-tech text-sm sm:text-base tracking-[0.06em] text-[var(--fg)] transition-opacity hover:opacity-70"
+                  className="inline-block border-b border-[var(--fg)] pb-1 font-mono-tech text-sm sm:text-base tracking-[0.06em] text-[var(--fg)] transition-opacity hover:opacity-70 break-all"
                 >
                   {STUDIO_CONFIG.email}
                 </a>
@@ -77,7 +77,7 @@ export function Footer() {
             <div>
               <a
                 href={`mailto:${STUDIO_CONFIG.email}`}
-                className="inline-flex items-center gap-2 border border-[var(--fg)] px-6 py-3.5 font-mono-tech text-xs tracking-[0.18em] text-[var(--fg)] uppercase transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)]"
+                className="inline-flex items-center gap-2 border border-[var(--fg)] px-6 py-3.5 font-mono-tech text-xs tracking-[0.18em] text-[var(--fg)] uppercase transition-colors hover:bg-[var(--fg)] hover:text-[var(--bg)] min-h-[44px]"
               >
                 <span>[{STUDIO_CONFIG.contactCtaLabel}</span>
                 <span aria-hidden="true">&rarr;]</span>
