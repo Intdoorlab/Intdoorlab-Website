@@ -71,8 +71,8 @@ export function Navigation({ invertedOverHero = false }: NavigationProps) {
   const inverted = invertedOverHero;
 
   const bgClass = inverted
-    ? 'bg-[var(--fg)] text-[var(--bg)] border-[var(--inv-line)]'
-    : 'bg-[var(--bg)] text-[var(--fg)] border-[var(--line)]';
+    ? 'bg-[var(--fg)] text-[var(--bg)] border-[var(--nav-inv-line)]'
+    : 'bg-[var(--bg)] text-[var(--fg)] border-[var(--nav-line)]';
   const mutedClass = inverted ? 'text-[var(--inv-muted)]' : 'text-[var(--muted)]';
 
   return (
